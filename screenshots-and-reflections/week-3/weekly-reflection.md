@@ -2,24 +2,12 @@
 
 #### What went well this week? 
 
-Replace this text with your response. 
+It took me a bit of getting used to but the videos were helpful to follow along with and looking at the code from the notes I was able to piece together the code.
 
 #### What didn't go so well this week? 
 
-Replace this text with your response.  
+I'm doing this on the school laptops so it's difficult to work on one monitor the whole time switching back and forth. (I'm saving up for a new computer to be able to run the right software.  I'm working on a tower that's going on 15 years old).  I had trouble putting the steps together and actually navigating the oracle site to read all the usefull information.  I think the oracle site is just a bit overwhelming for me at first with so much to sift through.  I feel that I'm able to read the code just fine after it's all said and done and I was able to trouble shoot the TEST txt files this week better than last and feel more confident on those.  But it took me a longer time than I would've liked to actually look through the code before writing it and find what I needed to include.
 
 #### What additional resources did you use or what help did you receive to complete your work? 
 
-Share your resources here. Example: "When completing Lab 2, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
-
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
-
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
-
-Replace this text and the examples above with your own references. 
+I solved it all from the oracle site and the class lecture site and videos.

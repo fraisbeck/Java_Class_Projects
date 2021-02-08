@@ -19,6 +19,6 @@ public class LabThree {
     /** run
      */
     public void run (String myString) {
-        System.out.println("input: " + myString;
+        System.out.println("input: " + myString);
     }
 }
