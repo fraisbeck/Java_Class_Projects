@@ -2,24 +2,12 @@
 
 #### What went well this week? 
 
-Replace this text with your response. 
+This week was fairly simple to just get project 2 setup for labs.  I need to take notes on what to do to switch back and forth between them so I can finish project 1.  I still am having difficulty grasping what I'm missing from the videos and lecture notes on what the final code is supposed to look like.
 
 #### What didn't go so well this week? 
 
-Replace this text with your response.  
+There was a lot of downloading and extracting and making sure things were in the proper folder directory that simply following the tasks was simple enough but I needed to go back through it to learn what exactly I actually did outside of just downloading a bunch of files and run tests
 
 #### What additional resources did you use or what help did you receive to complete your work? 
 
-Share your resources here. Example: "When completing Lab 2, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
-
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
-
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
-
-Replace this text and the examples above with your own references. 
+I just followed the module notes
