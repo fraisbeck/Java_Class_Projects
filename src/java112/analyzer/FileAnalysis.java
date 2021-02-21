@@ -29,8 +29,7 @@ public class FileAnalysis {
         if (arguments.length != validCommandLineArguments) {
             System.out.println("Please enter one argument on the command line, an input file name");
         } else {
-            FileAnalysis fileAnalysis = new FileAnalysis();
-            fileAnalysis.run(arguments[0]);
+            run(arguments[0]);
         }
     }
 
@@ -92,8 +91,10 @@ public class FileAnalysis {
      */
     public void tokenProcessor(String[] tokens) {
         for (int counter = 0; counter < tokens.length; counter++) {
-            distinctAnalyzer.processToken(tokens[counter]);
-            summaryAnalyzer.processToken(tokens[counter]);
+            if (tokens[counter].length() > 0) {
+                distinctAnalyzer.processToken(tokens[counter]);
+                summaryAnalyzer.processToken(tokens[counter]);
+            }
         }
     }
 

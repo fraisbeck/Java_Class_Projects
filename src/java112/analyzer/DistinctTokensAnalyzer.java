@@ -34,9 +34,7 @@ public class DistinctTokensAnalyzer implements TokenAnalyzer {
      * @param token a single worded string
      */
     public void processToken(String token) {
-        if (token.length() > 0) {
             distinctTokens.add(token);
-        }
     }
 
     /**
@@ -45,8 +43,7 @@ public class DistinctTokensAnalyzer implements TokenAnalyzer {
      * @param outputFilePath file to write each token too
      */
     public void generateOutputFile (String inputFilePath, String outputFilePath) {
-        try (BufferedReader input = new BufferedReader(new FileReader(inputFilePath));
-            PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
+        try (PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
             for (String token : distinctTokens) {
                 output.println(token);
             }

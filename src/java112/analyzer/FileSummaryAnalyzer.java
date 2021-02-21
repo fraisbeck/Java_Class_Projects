@@ -36,9 +36,7 @@ public class FileSummaryAnalyzer implements TokenAnalyzer {
      * @param token a single word gatherd from the input file
      */
     public void processToken(String token) {
-        if (token.length() > 0) {
             totalTokensCount++;
-        }
     }
 
     /**
@@ -55,8 +53,7 @@ public class FileSummaryAnalyzer implements TokenAnalyzer {
      * @param outputFilePath the file being written too
      */
     public void generateOutputFile (String inputFilePath, String outputFilePath) {
-        try (BufferedReader input = new BufferedReader(new FileReader(inputFilePath));
-            PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
+        try (PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
             File inputFile = new File(inputFilePath);
 
             output.println("Application: File Analyzer");
