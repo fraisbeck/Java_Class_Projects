@@ -3,26 +3,30 @@ import java.io.*;
 import java.util.*;
 
 /**
- *  FileAnalysis
+ *  Opens a given file and reads every line in the document
+ *  While sending the results to two different analyzer classes to store the
+ *  data read
  *  @author fraisbeck
  */
 
 public class FileAnalysis {
 
     /**
-     *  Declare constant variables
+     *  Declare constant variable for how many files are to be allowed into the program at once
      */
     private static final int validCommandLineArguments = 1;
-
-
     /**
-     *  Declare instance variables of each analyzer class
+     *  Declare instance variable of a new summaryAnalyzer class
      */
     private FileSummaryAnalyzer summaryAnalyzer;
+    /**
+     *  Declare instance variable of a new distinctAnalyzer class
+     */
     private DistinctTokensAnalyzer distinctAnalyzer;
 
     /**
-     *  Main method to run our program
+     *  Determines if the amount of arguments or files that are given meet the
+     *  number requirments to properly run the program and if not kill the code
      *  @param arguments Command Line arguments of an input file
      */
     public void analyze(String[] arguments) {
@@ -34,8 +38,8 @@ public class FileAnalysis {
     }
 
     /**
-     *  Runs several methods in the function in order
-     *  @param input input file to read
+     *  Runs several methods of the class in order
+     *  @param input file to be read
      */
     public void run(String input) {
         instantiateVariables();
@@ -44,7 +48,7 @@ public class FileAnalysis {
     }
 
     /**
-     *  Instantiate variables
+     *  Instantiate instances of analyzers
      */
     public void instantiateVariables() {
         summaryAnalyzer = new FileSummaryAnalyzer();
@@ -55,7 +59,7 @@ public class FileAnalysis {
      *  Opens the input file and beings to read it line by line
      *  then separates those lines into arrays of words
      *  then takes those words and processes them
-     *  @param inputFile the input file to read
+     *  @param inputFile the file to be read
      */
     public void openFile(String inputFile) {
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
@@ -77,7 +81,7 @@ public class FileAnalysis {
     }
 
     /**
-     *  Splits words in a line based on empty characters
+     *  Splits words in a line based on non-word characters
      *  @param inputLine a multiworded string to be broken down
      */
     public String[] tokenGenerator(String inputLine) {
@@ -85,7 +89,8 @@ public class FileAnalysis {
     }
 
     /**
-     *  Loops through an array of strings and sends each word through
+     *  Loops through an array of strings and sends each string that is
+     *  longer than 0 characters through
      *  two different processors
      *  @param tokens an array of strings
      */

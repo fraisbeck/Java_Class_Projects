@@ -2,13 +2,17 @@ package java112.analyzer;
 import java.io.*;
 import java.util.*;
 
-/** DistinctTokensAnalyzer
+/**
+ * Sepparates single worded string values into a unique list
+ * by comparing them to the current list before storing them
+ * then prints them to a new file document
  * @author fraisbeck
  */
 public class DistinctTokensAnalyzer implements TokenAnalyzer {
 
     /**
-     *  Only allowed instance variable
+     *  Declare Instance Variable used for storing distinct single word Strings
+     *  from a given file
      */
     private Set<String> distinctTokens;
 
@@ -22,15 +26,14 @@ public class DistinctTokensAnalyzer implements TokenAnalyzer {
 
     /**
      * Returns the set of distinctTokens
-     * @return distinctTokens the list of distinct words recorded
+     * @return the list of distinct words recorded
      */
     public Set<String> getDistinctTokens() {
         return distinctTokens;
     }
 
     /**
-     * Determines if the string given has an actual length before adding it
-     * to the distinctTokens set
+     * Adds the given single word string value to the list when called
      * @param token a single worded string
      */
     public void processToken(String token) {

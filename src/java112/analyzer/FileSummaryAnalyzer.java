@@ -3,14 +3,15 @@ import java.io.*;
 import java.util.*;
 import java.text.*;
 
-/** FileSummaryAnalyzer
+/**
+ * Gathers information about an input file and displays the File data to a new document
  * @author fraisbeck
  */
 
 public class FileSummaryAnalyzer implements TokenAnalyzer {
 
     /**
-     *  Only allowed instance variable
+     *  New Instance variable used to count how many tokens are in a given file
      */
     private int totalTokensCount;
 
@@ -24,15 +25,14 @@ public class FileSummaryAnalyzer implements TokenAnalyzer {
 
     /**
      * Returns the total number of tokens counted from the input file
-     * @return totalTokensCount the total number of tokens counted
+     * @return the total number of tokens counted
      */
     public int getTotalTokensCount() {
         return totalTokensCount;
     }
 
     /**
-     * Determines if the string given has an actual length before adding it
-     * to the total token count
+     * Adds 1 to the int value of the class whenever it's called with a string
      * @param token a single word gatherd from the input file
      */
     public void processToken(String token) {

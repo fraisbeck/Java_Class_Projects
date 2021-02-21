@@ -2,7 +2,8 @@ package java112.analyzer;
 import java.io.*;
 import java.util.*;
 
-/** tokenAnalyzer interface
+/**
+ * A Token analyzer interface for implimenting into other analyzer classes
  * @author fraisbeck
  */
 
