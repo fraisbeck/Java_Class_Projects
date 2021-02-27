@@ -1,25 +1,20 @@
 # Weekly Reflection
 
-#### What went well this week? 
+#### What went well this week?
 
-Replace this text with your response. 
+I think this week went well all around.  There were some obstacles that I had to figure out on my own but overall I think this was a good week.
 
-#### What didn't go so well this week? 
+#### What didn't go so well this week?
 
-Replace this text with your response.  
+At first I didn't know what the jsp file was doing and I tried looking it up on the websites lecture notes but didn't figure it out until I watched the 3rd video about it
+Trying to wrap my head around linking the image was also screwing with me but it just took some trial and error to figure the file path
 
-#### What additional resources did you use or what help did you receive to complete your work? 
+#### What additional resources did you use or what help did you receive to complete your work?
 
-Share your resources here. Example: "When completing Lab 2, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
+I used
 
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
+tutorialspoint.com/servlets/servlets-hits-counter.htm to figure out how to impliment the hit Counter
 
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
+I also used
 
-Replace this text and the examples above with your own references. 
+javatpoint.com/java-get-current-date to get the code for displaying the current time and date.
