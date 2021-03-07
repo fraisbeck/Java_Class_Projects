@@ -1,25 +1,16 @@
 # Weekly Reflection
 
-#### What went well this week? 
+#### What went well this week?
 
-Replace this text with your response. 
+I think things went pretty well this week.  A few road blocks I ran into along the way but it was simple errors like
+copy paste scripts that I didn't fully re edit.  
 
-#### What didn't go so well this week? 
+#### What didn't go so well this week?
 
-Replace this text with your response.  
+I didn't really know if Lab 4 came out the way it was supposed too.  The only difference in the print line was that it came out in reverse which I feel isn't much of a change.
 
-#### What additional resources did you use or what help did you receive to complete your work? 
+I had an issue with the new file runLabsUnit2.sh also not allowing me to run it properly until I changed the file settings to allow me to do so.
 
-Share your resources here. Example: "When completing Lab 2, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
+#### What additional resources did you use or what help did you receive to complete your work?
 
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
-
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
-
-Replace this text and the examples above with your own references. 
+Outside of the class site and videos I used the Jdoc site to learn the methods and classes of each new instance we were using.
