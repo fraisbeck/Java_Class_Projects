@@ -1,6 +1,7 @@
 package java112.analyzer;
 import java.io.*;
 import java.util.*;
+import java112.utilities.*;
 
 /**
  *  Runs the main method of the Analyzer project

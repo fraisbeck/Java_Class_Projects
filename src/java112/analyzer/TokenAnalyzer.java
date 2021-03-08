@@ -1,6 +1,7 @@
 package java112.analyzer;
 import java.io.*;
 import java.util.*;
+import java112.utilities.*;
 
 /**
  * A Token analyzer interface for implimenting into other analyzer classes
@@ -19,7 +20,6 @@ public interface TokenAnalyzer {
      * Takes two file paths and takes data from one and writes data to the other
      * depending on the analyzer using it
      * @param inputFilePath  The file being read or data collected rom
-     * @param outputFilePath The file being written too
      */
-    public void generateOutputFile (String inputFilePath, String outputFilePath);
+    public void generateOutputFile (String inputFilePath);
 }

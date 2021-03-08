@@ -2,6 +2,7 @@ package java112.analyzer;
 import java.io.*;
 import java.util.*;
 import java.text.*;
+import java112.utilities.*;
 
 /**
  * Gathers information about an input file and displays the File data to a new document
@@ -11,9 +12,10 @@ import java.text.*;
 public class FileSummaryAnalyzer implements TokenAnalyzer {
 
     /**
-     *  New Instance variable used to count how many tokens are in a given file
+     *  New Instance variables
      */
     private int totalTokensCount;
+    private Properties properties;
 
     /**
      * The zero parameter constructor that starts the
@@ -21,6 +23,15 @@ public class FileSummaryAnalyzer implements TokenAnalyzer {
      */
     public FileSummaryAnalyzer() {
         totalTokensCount = 0;
+    }
+
+    /**
+     * A one parameter constructor that assigns the properties instance variable
+     * @param properties a properties file
+     */
+    public FileSummaryAnalyzer(Properties properties) {
+        this();
+        this.properties = properties;
     }
 
     /**
@@ -50,15 +61,15 @@ public class FileSummaryAnalyzer implements TokenAnalyzer {
      *   the total number of words in the file
      *
      * @param inputFilePath  the file being read
-     * @param outputFilePath the file being written too
      */
-    public void generateOutputFile (String inputFilePath, String outputFilePath) {
+    public void generateOutputFile (String inputFilePath) {
+        String outputFilePath = properties.getProperty("output.directory") + properties.getProperty("output.file.summary");
         try (PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
             File inputFile = new File(inputFilePath);
 
-            output.println("Application: File Analyzer");
-            output.println("Author: Frank Raisbeck");
-            output.println("Author Email: fraisbeck@madisoncollege.edu");
+            output.println("Application: " + properties.getProperty("application.name"));
+            output.println("Author: " + properties.getProperty("author"));
+            output.println("Author Email: " + properties.getProperty("author.email.address"));
             output.println("File: " + inputFile.getAbsolutePath());
             java.util.Date date = new java.util.Date();
             output.println("Date of analysis: " + date);

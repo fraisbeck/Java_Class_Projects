@@ -1,6 +1,7 @@
 package java112.analyzer;
 import java.io.*;
 import java.util.*;
+import java112.utilities.*;
 
 /**
  *  Opens a given file and reads every line in the document
@@ -9,20 +10,17 @@ import java.util.*;
  *  @author fraisbeck
  */
 
-public class FileAnalysis {
+public class FileAnalysis implements PropertiesLoader {
 
     /**
      *  Declare constant variable for how many files are to be allowed into the program at once
      */
-    private static final int validCommandLineArguments = 1;
+    private static final int validCommandLineArguments = 2;
+
     /**
-     *  Declare instance variable of a new summaryAnalyzer class
+     * Declare instance variables
      */
-    private FileSummaryAnalyzer summaryAnalyzer;
-    /**
-     *  Declare instance variable of a new distinctAnalyzer class
-     */
-    private DistinctTokensAnalyzer distinctAnalyzer;
+    List<TokenAnalyzer> myAnalyzers;
 
     /**
      *  Determines if the amount of arguments or files that are given meet the
@@ -31,8 +29,9 @@ public class FileAnalysis {
      */
     public void analyze(String[] arguments) {
         if (arguments.length != validCommandLineArguments) {
-            System.out.println("Please enter one argument on the command line, an input file name");
+            System.out.println("Please enter two arguments on the command line, an input file name and a properties file");
         } else {
+            instantiateVariables(loadProperties(arguments[1]));
             run(arguments[0]);
         }
     }
@@ -42,7 +41,6 @@ public class FileAnalysis {
      *  @param input file to be read
      */
     public void run(String input) {
-        instantiateVariables();
         openFile(input);
         writeOutputFiles(input);
     }
@@ -50,9 +48,12 @@ public class FileAnalysis {
     /**
      *  Instantiate instances of analyzers
      */
-    public void instantiateVariables() {
-        summaryAnalyzer = new FileSummaryAnalyzer();
-        distinctAnalyzer = new DistinctTokensAnalyzer();
+    public void instantiateVariables(Properties property) {
+        myAnalyzers = new ArrayList<TokenAnalyzer>();
+        myAnalyzers.add(new FileSummaryAnalyzer(property));
+        myAnalyzers.add(new DistinctTokensAnalyzer(property));
+        myAnalyzers.add(new LargestTokensAnalyzer(property));
+        myAnalyzers.add(new DistinctTokenCountsAnalyzer(property));
     }
 
     /**
@@ -97,9 +98,18 @@ public class FileAnalysis {
     public void tokenProcessor(String[] tokens) {
         for (int counter = 0; counter < tokens.length; counter++) {
             if (tokens[counter].length() > 0) {
-                distinctAnalyzer.processToken(tokens[counter]);
-                summaryAnalyzer.processToken(tokens[counter]);
+                analyzerProcessorLoop(tokens[counter]);
             }
+        }
+    }
+
+    /**
+     * Loops through all the analyzers we have and runs the processToken method
+     * @param token a single string value
+     */
+    public void analyzerProcessorLoop(String token) {
+        for (TokenAnalyzer list : myAnalyzers) {
+            list.processToken(token);
         }
     }
 
@@ -109,8 +119,8 @@ public class FileAnalysis {
      *  @param inputFile the input file to use for output data
      */
     public void writeOutputFiles(String inputFile) {
-        distinctAnalyzer.generateOutputFile(inputFile, "output/distinct_tokens.txt");
-        summaryAnalyzer.generateOutputFile(inputFile, "output/summary.txt");
-
+        for (TokenAnalyzer list : myAnalyzers) {
+            list.generateOutputFile(inputFile);
+        }
     }
 }

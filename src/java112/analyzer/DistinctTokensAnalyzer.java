@@ -1,6 +1,7 @@
 package java112.analyzer;
 import java.io.*;
 import java.util.*;
+import java112.utilities.*;
 
 /**
  * Sepparates single worded string values into a unique list
@@ -11,10 +12,10 @@ import java.util.*;
 public class DistinctTokensAnalyzer implements TokenAnalyzer {
 
     /**
-     *  Declare Instance Variable used for storing distinct single word Strings
-     *  from a given file
+     *  Declare Instance Variables
      */
     private Set<String> distinctTokens;
+    private Properties properties;
 
     /**
      *  The zero parameter constructor that instantiates the
@@ -22,6 +23,15 @@ public class DistinctTokensAnalyzer implements TokenAnalyzer {
      */
     public DistinctTokensAnalyzer() {
         distinctTokens = new TreeSet<String>();
+    }
+
+    /**
+     * A one parameter constructor that assigns the properties instance variable
+     * @param properties a properties file
+     */
+    public DistinctTokensAnalyzer(Properties properties) {
+        this();
+        this.properties = properties;
     }
 
     /**
@@ -43,9 +53,10 @@ public class DistinctTokensAnalyzer implements TokenAnalyzer {
     /**
      * Generates an output file that is a list of single words on each line
      * @param inputFilePath  the file to read
-     * @param outputFilePath file to write each token too
      */
-    public void generateOutputFile (String inputFilePath, String outputFilePath) {
+    public void generateOutputFile (String inputFilePath) {
+        String outputFilePath = properties.getProperty("output.directory") + properties.getProperty("output.file.distinct");
+
         try (PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
             for (String token : distinctTokens) {
                 output.println(token);

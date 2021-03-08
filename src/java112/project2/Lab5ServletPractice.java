@@ -53,6 +53,8 @@ public class Lab5ServletPractice extends HttpServlet {
         out.print("<HEAD><TITLE>Lab5Servlet Output</TITLE></HEAD>");
         out.print("<BODY>");
         out.print("<h1>Frank Raisbeck Finished Lab 2-5</h1>");
+        out.print("<a href='/java112'>Back to the homepage</a>");
+        out.print("</br></br>");
         out.print("<table style='width:50%'>");
         out.print("<tr>");
         out.print("<th>First Date and Time the servlet was accessed</th>");
@@ -65,9 +67,7 @@ public class Lab5ServletPractice extends HttpServlet {
         out.print("<td>" + hitCount + "</td>");
         out.print("</tr>");
         out.print("</table>");
-        out.print("</ br></ br>");
         out.print("<p>The log file doesn't display any information before the Servlet was accessed in the browser.</p>");
-        out.print("</ br></ br>");
         out.print("<p>After accessing the Servlet in the browser the log information displays the init information first."
                 + "  Right after that the doGet log information is printed out.  And every refresh after or revist afterwards ONLY the"
                 + " doGet log information is printed.</p>");

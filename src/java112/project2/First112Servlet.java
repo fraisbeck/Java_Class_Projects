@@ -6,17 +6,15 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 /**
- *  This is part of a lab and is the first servlet for the course.
+ *  This is part of Project 2 and is the first servlet for the course.
  *
- *@author    eknapp
+ *@author    fRaisbeck
  */
 @WebServlet(
-    name = "trivialServlet",
-    urlPatterns = { "/trivial", "/simple" }
+    name = "first112Servlet",
+    urlPatterns = { "/first" }
 )
-
-public class TrivialServlet extends HttpServlet {
-
+public class First112Servlet extends HttpServlet {
     /**
      *  Handles HTTP GET requests.
      *
@@ -31,18 +29,15 @@ public class TrivialServlet extends HttpServlet {
         // set the response type before sending data
         PrintWriter  out  = response.getWriter();
         out.print("<HTML>");
-        out.print("<HEAD><TITLE>TrivialServlet Output</TITLE></HEAD>");
+        out.print("<HEAD><TITLE>First112Servlet Output</TITLE></HEAD>");
         out.print("<BODY>");
-        out.print("<h1>Frank Raisbeck Finished Lab 2-1</h1>");
+        out.print("<h1>Frank Raisbeck Java Programming 112 Spring 2021</h1>");
         out.print("<a href='/java112'>Back to the homepage</a>");
         out.print("</br></br>");
-        out.print("<img src='images/java.jpg' alt='Java Cup' />");
+        out.print("<img src='images/javaFirstServlet.jpg' alt='Java Image' />");
         out.print("</br>");
-        System.out.println("Is this logging?");
-        log("Is this logging?");
         out.print("</BODY>");
         out.print("</HTML>");
         out.close();
     }
-
 }

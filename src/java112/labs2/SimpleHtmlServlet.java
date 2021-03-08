@@ -10,13 +10,13 @@ import javax.servlet.annotation.*;
  *
  *@author    eknapp
  */
-@WebServlet (
-    name = "simpleServlet", 
+@WebServlet(
+    name = "simpleServlet",
     urlPatterns = { "/simple-servlet" }
 )
 public class SimpleHtmlServlet extends HttpServlet {
 
-    
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
@@ -28,4 +28,3 @@ public class SimpleHtmlServlet extends HttpServlet {
     }
 
 }
-
