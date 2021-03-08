@@ -11,6 +11,7 @@
 <div id="wrap">
 	<div id="header">
 		<div id="headerlinks">
+		<a href="/java112" title="Homepage">Home</a>
 		<a href="#" title="Portfolio">Portfolio</a>
 		<a href="#" title="Blog">Blog</a>
 		<a href="#" title="About Us">About Us</a>
@@ -43,7 +44,7 @@
 		<h2>Unit 3</h2>
 		<div class="box">
 		<ul>
-		<li><a href="#">Apple</a></li>
+		<li><a href="/java112/myFirstJSP.jsp">lab1 First JSP</a></li>
 		<li><a href="#">Microsoft</a></li>
 		</ul>
 		</div>

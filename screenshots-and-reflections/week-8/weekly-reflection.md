@@ -2,24 +2,12 @@
 
 #### What went well this week? 
 
-Replace this text with your response. 
+This week was really easy to follow along with.  My previous HTML classes help me better able to read the code that we're using as well so manipulating the home page and editing it to feel more like it belongs with my site was easy to follow along with.
 
 #### What didn't go so well this week? 
 
-Replace this text with your response.  
+The only thing that's not going well is the image I placed in isn't set to the css we're running with so my side menu bar is covered on this weeks assignment by it.  But the home page link on the top isn't so you can still navigate back home to it.
 
 #### What additional resources did you use or what help did you receive to complete your work? 
 
-Share your resources here. Example: "When completing Lab 2, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
-
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
-
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
-
-Replace this text and the examples above with your own references. 
+All I did was follow the video and read some lecture notes for this week.  No need to look outside of class to complete this one.
