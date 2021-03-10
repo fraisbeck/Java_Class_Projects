@@ -54,6 +54,7 @@ public class FileAnalysis implements PropertiesLoader {
         myAnalyzers.add(new DistinctTokensAnalyzer(property));
         myAnalyzers.add(new LargestTokensAnalyzer(property));
         myAnalyzers.add(new DistinctTokenCountsAnalyzer(property));
+        myAnalyzers.add(new LexicalDensityAnalyzer(property));
     }
 
     /**
@@ -96,9 +97,9 @@ public class FileAnalysis implements PropertiesLoader {
      *  @param tokens an array of strings
      */
     public void tokenProcessor(String[] tokens) {
-        for (int counter = 0; counter < tokens.length; counter++) {
-            if (tokens[counter].length() > 0) {
-                analyzerProcessorLoop(tokens[counter]);
+        for (String word : tokens) {
+            if (word.length() > 0) {
+                analyzerProcessorLoop(word);
             }
         }
     }

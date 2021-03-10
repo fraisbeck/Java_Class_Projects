@@ -17,8 +17,7 @@ public interface TokenAnalyzer {
     public void processToken(String token);
 
     /**
-     * Takes two file paths and takes data from one and writes data to the other
-     * depending on the analyzer using it
+     * Generates an output file that is based on the data from the input file
      * @param inputFilePath  The file being read or data collected rom
      */
     public void generateOutputFile (String inputFilePath);

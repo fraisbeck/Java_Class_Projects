@@ -2,20 +2,14 @@
 
 #### What were your AHA!! moments while completing this project?
 
-Replace this text with your thoughts.
+This project went a lot smoother this time around than the first one.  Not sure if it as because I was working with pre existing
+or if it's because I've just been picking up on the new methods more than last project.  But I feel a lot more confident this time around than last
 
-#### What additional resources did you use or what help did you receive to complete your work? 
 
-Share your resources here. Example: "When completing this project, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
+I attempted the Lexical Density analyzer and I feel like I got a good portion of it correct but it's only reading it as 97% of the big file.  So I don't know if the list of words I have isn't long enough or if the file just has that many random words that don't fit into the list.  Either way I feel like I have 80% of it done.
 
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
+#### What additional resources did you use or what help did you receive to complete your work?
 
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
-
-Replace this text and the examples above with your own references. 
+I did several google searches (I did them a while ago on my other computer so I don't know the exact Url's) but I looked up how to iterate through
+a Map set and add 1 to the value based on the key without replacing it and re entering it with the put method.  I also looked up how to continue a properties file
+text with multiple lines to still be read as the same one.  Otherwise everything else I found on the class site and videos.

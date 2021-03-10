@@ -22,7 +22,7 @@ public class DistinctTokenCountsAnalyzer implements TokenAnalyzer {
      *  The zero parameter constructor that instantiates the distinctTokensCounts variable
      */
     public DistinctTokenCountsAnalyzer() {
-        distinctTokenCounts = new HashMap<String, Integer>();
+        distinctTokenCounts = new TreeMap<String, Integer>();
     }
 
     /**
@@ -55,8 +55,8 @@ public class DistinctTokenCountsAnalyzer implements TokenAnalyzer {
     }
 
     /**
-     * Takes two file paths and takes data from one and writes data to the other
-     * depending on the analyzer using it
+     * Generates an output file that is a list of single words on each line
+     * along with how many times it appears in the file
      * @param inputFilePath  The file being read or data collected rom
      */
     public void generateOutputFile (String inputFilePath) {

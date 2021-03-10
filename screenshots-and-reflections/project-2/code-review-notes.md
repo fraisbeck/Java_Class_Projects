@@ -1,4 +1,3 @@
 # Code Review Notes
 
-A place for you to take notes during code review.
-
+Change line 112 to an enhanced for loop for cleaner code in the File Analysis class

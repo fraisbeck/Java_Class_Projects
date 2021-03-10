@@ -56,8 +56,7 @@ public class LargestTokensAnalyzer implements TokenAnalyzer {
     }
 
     /**
-     * Takes two file paths and takes data from one and writes data to the other
-     * depending on the analyzer using it
+     * Generates an output file that is a list of single words on each line based on the size of the word
      * @param inputFilePath  The file being read or data collected rom
      */
     public void generateOutputFile (String inputFilePath) {
