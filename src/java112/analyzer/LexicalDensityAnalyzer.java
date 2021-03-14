@@ -15,16 +15,16 @@ public class LexicalDensityAnalyzer implements TokenAnalyzer {
     // Declare instance variables
     private Properties properties;
     private Set<String> nonLexicalWords;
-    private Set<String> allWordsFound;
-    private Set<String> lexicalWordsFound;
+    private Integer allWordsFound;
+    private Integer lexicalWordsFound;
 
     /**
      * The zero parameter constructor
      */
     public LexicalDensityAnalyzer() {
         nonLexicalWords = new TreeSet<String>();
-        allWordsFound = new TreeSet<String>();
-        lexicalWordsFound = new TreeSet<String>();
+        allWordsFound = 0;
+        lexicalWordsFound = 0;
         setLexicalDensityWords("config/NonLexicalWords.txt");
     }
 
@@ -92,14 +92,14 @@ public class LexicalDensityAnalyzer implements TokenAnalyzer {
      */
     public void processToken(String token) {
         String lowerCaseToken = token.toLowerCase();
-        allWordsFound.add(lowerCaseToken);
+        allWordsFound++;
         if (!nonLexicalWords.contains(lowerCaseToken) && lowerCaseToken.matches("[a-zA-Z]+")) {
-            lexicalWordsFound.add(lowerCaseToken);
+            lexicalWordsFound++;
         }
     }
 
     public Float lexicalDensityCalculator() {
-        Float lexicalDensity = ((100 * (float)lexicalWordsFound.size()) / allWordsFound.size());
+        Float lexicalDensity = ((100 * (float)lexicalWordsFound) / allWordsFound);
         return lexicalDensity;
 
     }
@@ -114,11 +114,7 @@ public class LexicalDensityAnalyzer implements TokenAnalyzer {
         Float percentage = lexicalDensityCalculator();
         try (PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilePath)))) {
             output.println("The lexical density of " + inputFilePath + " is " + String.format("%.0f%%",percentage));
-            for (String token : lexicalWordsFound) {
-                output.println(token);
-            }
-            //output.println(allWordsFound);
-            //output.println(nonLexicalWords);
+
         } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("File was not found");
             fileNotFoundException.printStackTrace();
