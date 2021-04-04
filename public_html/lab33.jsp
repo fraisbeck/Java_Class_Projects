@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>fRaisbeck java112 First Real JSP</title>
+	<title>fRaisbeck java112 Lab33 JSP</title>
 	<meta http-equiv="Content-Language" content="English" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="generator" content="HTML Tidy, see www.w3.org" />
@@ -61,12 +61,11 @@
 	</div>
 
 	<div id="content">
-		<h2>myFirstJSP<span class="post-span">- by Frank Raisbeck</span></h2>
-		<img src="images/codeSample.png" class="post-img" alt="Bild" />
-        </br></br>
-        <h3>This is a simple first look at a JSP page.</h3>
-        <p>A change that gets compiled. Another change</p>
-        <p>Right now it is <%= new java.util.Date() %></p>
+        <h2>Map on a JSP Page</h2>
+        <p>${myMap["number"]}</p>
+        <p>${myMap["text"]}</p>
+        ${myMap["html"]}
+        <p>${myMap["aDate"]}</p>
 	</div>
 
 	<div id="footer">
