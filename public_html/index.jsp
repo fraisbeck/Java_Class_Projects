@@ -1,62 +1,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>fRaisbeck java112 Homepage</title>
-	<meta http-equiv="Content-Language" content="English" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css' />
-</head>
+	<%@ include file="head.jsp"%>
 <body>
 <div id="wrap">
-	<div id="header">
-		<div id="headerlinks">
-		<a href="/java112" title="Homepage">Home</a>
-		<a href="#" title="Portfolio">Portfolio</a>
-		<a href="#" title="Blog">Blog</a>
-		<a href="#" title="About Us">About Us</a>
-		<a href="#" title="Contact">Contact</a>
-		</div>
-		<h1><a href="#">Frank Raisbeck Java Programming 112 Homepage</a></h1>
-	</div>
+
+	<%@ include file="header.jsp"%>
 
 	<div id="sidebar">
-		<h2>Unit 1</h2>
-		<div class="box">
-		<ul>
-		<li><a href="linkingDemo.html">Demo page</a></li>
-		<li><a href="/java112/trivial">Trivial page</a></li>
-		<li><a href="#">Project 1</a></li>
-		<li><a href="#">Simple Build</a></li>
-		<li><a href="#">Testing</a></li>
-		</ul>
-		</div>
+		<%@ include file="unit1Sidebar.jsp"%>
 
-		<h2>Unit 2</h2>
-		<div class="box">
-		<ul>
-		<li><a href="/java112/lab5">Lab 5</a></li>
-		<li><a href="/java112/first">First Servlet page</a></li>
-		<li><a href="/java112/project2Properties">Properties Servlet</a></li>
-		</ul>
-		</div>
+		<%@ include file="unit2Sidebar.jsp"%>
 
-		<h2>Unit 3</h2>
-		<div class="box">
-		<ul>
-		<li><a href="/java112/myFirstJSP.jsp">Lab 1 First JSP</a></li>
-		<li><a href="/java112/lab32Servlet">Lab 2 Servlet</a></li>
-		<li><a href="/java112/lab33Servlet">Lab 3 Servlet</a></li>
-		</ul>
-		</div>
+		<%@ include file="unit3Sidebar.jsp"%>
 
-		<h2>Unit 4</h2>
-		<div class="box">
-		<ul>
-		<li><a href="#">Apple</a></li>
-		<li><a href="#">Microsoft</a></li>
-		</ul>
-		</div>
+		<%@ include file="unit4Sidebar.jsp"%>
 	</div>
 
 	<div id="content">
@@ -73,14 +30,8 @@
 		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 	</div>
 
-	<div id="footer">
-		<div style="float: right;">
-		<a href="#" title="Contact Us"><img src="images/contact.gif" alt="Contact" /></a>
-		<a href="#" title="Sitemap"><img src="images/sitemap.gif" alt="Sitemap" /></a>
-		<a href="#" title="Rss Feed"><img src="images/rss.png" alt="Rss Feed" /></a>
-		</div>
-		Theme #4 &copy; 2013 | <!-- You can use it for practically any personal or commercial use so long as you keep our footer credit links intact. -->Theme by <a target="_blank" href="http://codingdev.de" title="CodingDev">CodingDev</a>
-	</div>
+	<%@ include file="footer.jsp"%>
+
 </div>
 </body>
 </html>
