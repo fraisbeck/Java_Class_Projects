@@ -107,7 +107,7 @@ public class LexicalDensityAnalyzer implements TokenAnalyzer {
     /**
      * Takes the file paths and takes data from one and writes data to the other
      * depending on the analyzer using it
-     * @param inputFilePath  The file being read or data collected rom
+     * @param inputFilePath  The file being read or data collected from
      */
     public void generateOutputFile (String inputFilePath) {
         String outputFilePath = properties.getProperty("output.directory") + properties.getProperty("output.file.lexical.words");

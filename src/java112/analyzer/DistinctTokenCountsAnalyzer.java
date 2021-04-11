@@ -17,7 +17,6 @@ public class DistinctTokenCountsAnalyzer implements TokenAnalyzer {
     private Properties properties;
     private Map<String, Integer> distinctTokenCounts;
 
-
     /**
      *  The zero parameter constructor that instantiates the distinctTokensCounts variable
      */
@@ -57,7 +56,7 @@ public class DistinctTokenCountsAnalyzer implements TokenAnalyzer {
     /**
      * Generates an output file that is a list of single words on each line
      * along with how many times it appears in the file
-     * @param inputFilePath  The file being read or data collected rom
+     * @param inputFilePath  The file being read or data collected from
      */
     public void generateOutputFile (String inputFilePath) {
         String outputFilePath = properties.getProperty("output.directory") + properties.getProperty("output.file.distinct.counts");

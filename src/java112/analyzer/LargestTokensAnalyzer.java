@@ -57,7 +57,7 @@ public class LargestTokensAnalyzer implements TokenAnalyzer {
 
     /**
      * Generates an output file that is a list of single words on each line based on the size of the word
-     * @param inputFilePath  The file being read or data collected rom
+     * @param inputFilePath  The file being read or data collected from
      */
     public void generateOutputFile (String inputFilePath) {
         String outputFilePath = properties.getProperty("output.directory") + properties.getProperty("output.file.largest.words");
