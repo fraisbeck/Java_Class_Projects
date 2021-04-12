@@ -30,7 +30,7 @@ public class HttpRequestServlet extends HttpServlet {
 
         HttpRequestData newRequest = new HttpRequestData();
 
-        newRequest.setRemoteComputer(request.getRemoteUser());
+        newRequest.setRemoteComputer(request.getRemoteHost());
         newRequest.setRemoteAddress(request.getRemoteAddr());
         newRequest.setRequestMethod(request.getMethod());
         newRequest.setRequestURI(request.getRequestURI());
@@ -40,7 +40,7 @@ public class HttpRequestServlet extends HttpServlet {
         newRequest.setServerPortNumber(request.getServerPort());
         newRequest.setLocaleServer(request.getLocale());
         newRequest.setStringQuery(request.getQueryString());
-        newRequest.setQueryParameter(request.getParameterValues("queryParameter"));
+        newRequest.setQueryParameter(request.getParameter("queryParameter"));
         newRequest.setUserAgent(request.getHeader("User-Agent"));
 
         request.setAttribute("results", newRequest);

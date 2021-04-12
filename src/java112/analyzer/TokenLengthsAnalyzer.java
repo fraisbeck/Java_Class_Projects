@@ -106,7 +106,7 @@ public class TokenLengthsAnalyzer implements TokenAnalyzer {
      * @return       the percentage size based on the max value in the map set
      */
     public int valuePercentage (int value) {
-        int largestInt = maxValue();
+        int largestInt = Collections.max(tokenLengths.values());
         int total = 0;
         total =  Math.round(((value/(float)largestInt)*80));
         return total;
@@ -128,17 +128,17 @@ public class TokenLengthsAnalyzer implements TokenAnalyzer {
         return stars;
     }
 
-    /**
-     * loops through tokenLengths to find the largest int in the Value spot
-     * @return the largest value of tokenLengths
-     */
-    public int maxValue() {
-        int maxValue = 0;
-        for (Map.Entry<Integer, Integer> entry : tokenLengths.entrySet()) {
-            if (entry.getValue() > maxValue) {
-                maxValue = entry.getValue();
-            }
-        }
-        return maxValue;
-    }
+    // /**
+    //  * loops through tokenLengths to find the largest int in the Value spot
+    //  * @return the largest value of tokenLengths
+    //  */
+    // public int maxValue() {
+    //     int maxValue = 0;
+    //     for (Map.Entry<Integer, Integer> entry : tokenLengths.entrySet()) {
+    //         if (entry.getValue() > maxValue) {
+    //             maxValue = entry.getValue();
+    //         }
+    //     }
+    //     return maxValue;
+    // }
 }

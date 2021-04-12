@@ -1,3 +1,3 @@
 # Change log
 
-A place for you to document the changes made between code review and final approval submission.
+1) look up the method on collections to find the max value

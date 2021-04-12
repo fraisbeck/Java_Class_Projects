@@ -23,7 +23,7 @@ public class HttpRequestData {
     private int serverPortNumber;
     private Locale localeServer;
     private String stringQuery;
-    private String[] queryParameter;
+    private String queryParameter;
     private String userAgent;
 
     public String getRemoteComputer() {
@@ -106,11 +106,11 @@ public class HttpRequestData {
         this.stringQuery = newQueryString;
     }
 
-    public String[] getQueryParameter() {
+    public String getQueryParameter() {
         return queryParameter;
     }
 
-    public void setQueryParameter(String[] newQueryParameter) {
+    public void setQueryParameter(String newQueryParameter) {
         this.queryParameter = newQueryParameter;
     }
 
