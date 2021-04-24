@@ -1,20 +1,14 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<%@ include file="head.jsp"%>
+	<c:import url="head.jsp" />
 <body>
 <div id="wrap">
 
-	<%@ include file="header.jsp"%>
+	<c:import url="header.jsp" />
 
-	<div id="sidebar">
-		<%@ include file="unit1Sidebar.jsp"%>
-
-		<%@ include file="unit2Sidebar.jsp"%>
-
-		<%@ include file="unit3Sidebar.jsp"%>
-
-		<%@ include file="unit4Sidebar.jsp"%>
-	</div>
+	<c:import url="sidebar.jsp" />
 
 	<div id="content">
 		<h2>Lorem Ipsum <span class="post-span">- by Maurice from 09 Feb 2013</span></h2>
@@ -30,7 +24,7 @@
 		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 	</div>
 
-	<%@ include file="footer.jsp"%>
+	<c:import url="footer.jsp" />
 
 </div>
 </body>

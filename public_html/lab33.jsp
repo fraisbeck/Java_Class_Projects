@@ -6,15 +6,7 @@
 
 	<%@ include file="header.jsp"%>
 
-	<div id="sidebar">
-		<%@ include file="unit1Sidebar.jsp"%>
-
-		<%@ include file="unit2Sidebar.jsp"%>
-
-		<%@ include file="unit3Sidebar.jsp"%>
-
-		<%@ include file="unit4Sidebar.jsp"%>
-	</div>
+	<%@ include file="sidebar.jsp"%>
 
 	<div id="content">
         <h2>Map on a JSP Page</h2>
@@ -25,7 +17,7 @@
 	</div>
 
 	<%@ include file="footer.jsp"%>
-	
+
 </div>
 </body>
 </html>

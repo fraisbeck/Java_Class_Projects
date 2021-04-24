@@ -9,15 +9,7 @@
 
 	<c:import url="header.jsp" />
 
-	<div id="sidebar">
-		<c:import url="unit1Sidebar.jsp" />
-
-		<c:import url="unit2Sidebar.jsp" />
-
-		<c:import url="unit3Sidebar.jsp" />
-
-		<c:import url="unit4Sidebar.jsp" />
-	</div>
+	<c:import url="sidebar.jsp" />
 
 	<div id="content">
         <p>
