@@ -33,6 +33,7 @@ public class JDBCInsertEmployee {
 
         Connection connection = null;
         Statement statement = null;
+        ResultSet resultSet = null;
 
         try {
             //Register JDBC Driver
@@ -62,6 +63,43 @@ public class JDBCInsertEmployee {
 
             // Execute the query
             statement.executeUpdate(queryString);
+
+            String resultQueryString = "SELECT emp_id, first_name, last_name, ssn, dept, room, phone"
+                    + " FROM employees WHERE ssn like '" + ssn + "%'";
+
+            System.out.println("resultQueryString: " + resultQueryString);
+
+            resultSet = statement.executeQuery(resultQueryString);
+
+            System.out.println();
+
+            while (resultSet.next()) {
+                String resultedEmployeeId = resultSet.getString("emp_id");
+                String resultedFirstName = resultSet.getString("first_name");
+                String resultedLastName = resultSet.getString("last_name");
+                String resultedSocialSecurityNumber = resultSet.getString("ssn");
+                String resultedDepartment = resultSet.getString("dept");
+                String resultedRoomNumber = resultSet.getString("room");
+                String resultedPhoneNumber = resultSet.getString("phone");
+                System.out.println(" Row: " + resultedEmployeeId + " "
+                            + resultedFirstName + " " + resultedLastName + " " + resultedSocialSecurityNumber
+                            + " " + resultedDepartment + " " + resultedRoomNumber + " " + resultedPhoneNumber);
+            }
+
+            System.out.println();
+
+            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
+            int columns = resultSetMetaData.getColumnCount();
+            String nameOne = resultSetMetaData.getColumnName(1);
+            String typeOne = resultSetMetaData.getColumnTypeName(1);
+            String labelOne = resultSetMetaData.getColumnLabel(1);
+            System.out.println(" Column count : " + columns);
+            System.out.println(" Column 1 name : " + nameOne);
+            System.out.println(" Column 1 type : " + typeOne);
+            System.out.println(" Column 1 label name : " + labelOne);
+
+            System.out.println();
+
 
         } catch (ClassNotFoundException classNotFound) {
             classNotFound.printStackTrace();
