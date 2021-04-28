@@ -33,13 +33,15 @@ public class Project4SessionLab extends HttpServlet {
 
             HttpSession session = request.getSession();
             Integer sessionCounter = (Integer) session.getAttribute("project4SessionCounter");
+            String title = "Session Attribute";
 
             if (sessionCounter != null) {
                 sessionCounter++;
             } if (sessionCounter == null) {
                 sessionCounter = 1;
-            } 
+            }
 
+            session.setAttribute("title", title);
             session.setAttribute("project4SessionCounter", sessionCounter);
             String url = "/project4Session.jsp";
 
