@@ -1,25 +1,20 @@
 # Weekly Reflection
 
-#### What went well this week? 
+#### What went well this week?
 
-Replace this text with your response. 
+I think this week went fairly well.  I watched the videos and looked along with the demo example
+code given to figure it out piece by piece.
 
-#### What didn't go so well this week? 
+#### What didn't go so well this week?
 
-Replace this text with your response.  
+It took me a little bit to realize that int and Integer are two different types of variables
+You can't have a null int but you can have a null Integer.
 
-#### What additional resources did you use or what help did you receive to complete your work? 
+I'm also not sure if I did the title tag right in the last lab.  I copied over the head.JSP
+and modified it to pull the variable I entered to see if that works but the tab still read the
+same as my other tabs normally do.
 
-Share your resources here. Example: "When completing Lab 2, I used this [stackoverflow article](https://stackoverflow.com/questions/28177370/how-to-format-localdate-to-string), to format the date.   
+#### What additional resources did you use or what help did you receive to complete your work?
 
-I also got stuck with a corrupt commit error message: 
-			
-			error: inflate: data stream error (incorrect header check)
-			error: corrupt loose object '5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a'
-			fatal: loose object 5cdeb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a (stored in .git/objects/5c/deb9c3a1fe164cb4d2779d1e0d9d9f4ef18c6a) 
-			
-Curtis, the IT Guide, helped me resolve it by using [this article](https://stackoverflow.com/questions/12571557/fixing-a-corrupt-loose-object-as-a-commit-in-git).
-
-If you didn't use any additional resources or receive any outside help, then indicate that as such. Example: "I did not use any outside resources on any parts of this submission - the work is entirely my own."
-
-Replace this text and the examples above with your own references. 
+I used the class website, the class videos, and the w3schools website to refresh myself on
+html forms and syntax

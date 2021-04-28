@@ -33,6 +33,8 @@
     <ul>
     <li><a href="/java112/jstl-lab1.jsp">Lab 2 part 2</a></li>
     <li><a href="/java112/JSTLLab1Servlet">Lab 2 part 3</a></li>
+    <li><a href="/java112/lab41.jsp">Lab 3 Forms</a></li>
+    <li><a href="/java112/Project4SessionLab">Lab 4 Sessions</a></li>
     </ul>
     </div>
 </div>
