@@ -35,6 +35,8 @@
     <li><a href="/java112/JSTLLab1Servlet">Lab 2 part 3</a></li>
     <li><a href="/java112/lab41.jsp">Lab 3 Forms</a></li>
     <li><a href="/java112/Project4SessionLab">Lab 4 Sessions</a></li>
+    <li><a href="/java112/employeeSearchDisplay">Project 4 Employee Search Page</a></li>
+    <li><a href="#">Project 4 Add Employee Page</a></li>
     </ul>
     </div>
 </div>
