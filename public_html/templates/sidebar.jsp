@@ -2,7 +2,7 @@
     <h2>Unit 1</h2>
     <div class="box">
     <ul>
-    <li><a href="linkingDemo.html">Demo page</a></li>
+    <li><a href="/java112/linkingDemo.html">Demo page</a></li>
     <li><a href="/java112/trivial">Trivial page</a></li>
     </ul>
     </div>
@@ -19,7 +19,7 @@
     <h2>Unit 3</h2>
     <div class="box">
     <ul>
-    <li><a href="/java112/myFirstJSP.jsp">Lab 1 First JSP</a></li>
+    <li><a href="/java112/jsp/myFirstJSP.jsp">Lab 1 First JSP</a></li>
     <li><a href="/java112/lab32Servlet">Lab 2 Servlet</a></li>
     <li><a href="/java112/lab33Servlet">Lab 3 Servlet</a></li>
     <li><a href="/java112/mvc-demo">Lab 4 BeanDemo</a></li>
@@ -31,12 +31,13 @@
     <h2>Unit 4</h2>
     <div class="box">
     <ul>
-    <li><a href="/java112/jstl-lab1.jsp">Lab 2 part 2</a></li>
+    <li><a href="/java112/jsp/jstl-lab1.jsp">Lab 2 part 2</a></li>
     <li><a href="/java112/JSTLLab1Servlet">Lab 2 part 3</a></li>
-    <li><a href="/java112/lab41.jsp">Lab 3 Forms</a></li>
+    <li><a href="/java112/jsp/lab41.jsp">Lab 3 Forms</a></li>
     <li><a href="/java112/Project4SessionLab">Lab 4 Sessions</a></li>
     <li><a href="/java112/employeeSearchDisplay">Project 4 Employee Search Page</a></li>
-    <li><a href="#">Project 4 Add Employee Page</a></li>
+    <li><a href="/java112/employeeAddDisplay">Project 4 Add Employee Page</a></li>
+    <li><a href="/java112/analyzerWebAppDisplay">File Analyzer</a></li>
     </ul>
     </div>
 </div>

@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <c:set var="title" value="EmployeeSearch" scope="session"/>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<c:import url="../headUnit4.jsp" />
+	<c:import url="../templates/headUnit4.jsp" />
 <body>
 <div id="wrap">
 
-	<c:import url="../header.jsp" />
+	<c:import url="../templates/header.jsp" />
 
-	<c:import url="../sidebar.jsp" />
+	<c:import url="../templates/sidebar.jsp" />
 
 	<div id="content">
 
@@ -21,7 +21,7 @@
                 <legend>Search Category</legend>
                 <br />
                 <input type="radio" id="emp_id" name="searchType"
-                    value="emp_id" />
+                    value="emp_id" required/>
                 <label for="emp_id">Employee ID Number</label>
                 <br />
                 <br />
@@ -44,7 +44,7 @@
             <br />
             <br />
             <label for="searchTerm">Search For: </label>
-            <input type="text" name="searchTerm" /><br />
+            <input type="text" name="searchTerm" required/><br />
             <br />
             <br />
             <input type="submit" name="" value="Enter" /><br />
@@ -53,7 +53,7 @@
 
     </div>
 
-	<c:import url="../footer.jsp" />
+	<c:import url="../templates/footer.jsp" />
 
 </div>
 </body>

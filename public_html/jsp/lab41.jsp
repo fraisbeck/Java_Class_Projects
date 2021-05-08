@@ -2,13 +2,13 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<c:import url="head.jsp" />
+	<c:import url="../templates/head.jsp" />
 <body>
 <div id="wrap">
 
-	<c:import url="header.jsp" />
+	<c:import url="../templates/header.jsp" />
 
-	<c:import url="sidebar.jsp" />
+	<c:import url="../templates/sidebar.jsp" />
 
 	<div id="content">
         <h2>This is a sample form for Lab 4-1 Unit 4</h2>
@@ -39,7 +39,7 @@
 
 	</div>
 
-	<c:import url="footer.jsp" />
+	<c:import url="../templates/footerDirect.jsp" />
 
 </div>
 </body>

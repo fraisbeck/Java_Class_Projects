@@ -5,7 +5,7 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import java112.employee.*;
+import java112.analyzer.*;
 
 /**
  *  This will forward to the Employee Search JSP Page
@@ -13,10 +13,10 @@ import java112.employee.*;
  *@author    fraisbeck
  */
  @WebServlet(
-     name = "employeeSearchDisplay",
-     urlPatterns = { "/employeeSearchDisplay" }
+     name = "analyzerWebAppDisplay",
+     urlPatterns = { "/analyzerWebAppDisplay" }
  )
- public class EmployeeSearchDisplayServlet extends HttpServlet {
+ public class AnalyzerWebAppDisplayServlet extends HttpServlet {
 
      /**
       *  Handles HTTP GET requests.
@@ -32,7 +32,7 @@ import java112.employee.*;
              throws ServletException, IOException {
 
          //Create the url
-         String url = "/jsp/employeeSearch.jsp";
+         String url = "/jsp/analyzerWebApp.jsp";
 
          //Forward to jsp page
          RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);

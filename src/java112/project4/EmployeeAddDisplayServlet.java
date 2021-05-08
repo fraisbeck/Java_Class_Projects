@@ -5,6 +5,7 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import java112.utilities.*;
 import java112.employee.*;
 
 /**
@@ -13,10 +14,10 @@ import java112.employee.*;
  *@author    fraisbeck
  */
  @WebServlet(
-     name = "employeeSearchDisplay",
-     urlPatterns = { "/employeeSearchDisplay" }
+     name = "employeeAddDisplay",
+     urlPatterns = { "/employeeAddDisplay" }
  )
- public class EmployeeSearchDisplayServlet extends HttpServlet {
+ public class EmployeeAddDisplayServlet extends HttpServlet {
 
      /**
       *  Handles HTTP GET requests.
@@ -31,11 +32,11 @@ import java112.employee.*;
      public void doGet(HttpServletRequest request, HttpServletResponse response)
              throws ServletException, IOException {
 
-         //Create the url
-         String url = "/jsp/employeeSearch.jsp";
+        //Create the url
+        String url = "/jsp/employeeAdd.jsp";
 
-         //Forward to jsp page
-         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-         dispatcher.forward(request, response);
+        //Forward to jsp page
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
      }
  }

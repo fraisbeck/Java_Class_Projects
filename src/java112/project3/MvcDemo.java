@@ -32,7 +32,7 @@ public class MvcDemo extends HttpServlet {
 
         request.setAttribute("myCoolBean", myBean);
 
-        String url = "/beanOneDemo.jsp";
+        String url = "/jsp/beanOneDemo.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);

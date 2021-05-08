@@ -44,7 +44,7 @@ public class PropertiesServlet extends HttpServlet implements PropertiesLoader {
 
         request.setAttribute("properties", properties);
 
-        String url = "/properties.jsp";
+        String url = "/jsp/properties.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);

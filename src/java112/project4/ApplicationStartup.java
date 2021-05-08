@@ -7,6 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java112.utilities.*;
 import java112.employee.*;
+import java112.analyzer.*;
 
 /**
  *  This will perform the initialization for the application
@@ -23,12 +24,12 @@ public class ApplicationStartup extends HttpServlet implements PropertiesLoader 
      * Loads the properties file upon loading the web page
      * @throws ServletException [description]
      */
-    
+
     public void init() {
         ServletContext context = getServletContext();
-        Properties properties = loadProperties("/project4.properties");
-        context.setAttribute("project4Properties", properties);
-        EmployeeDirectory employeeDirectory = new EmployeeDirectory(properties);
+        Properties project4Properties = loadProperties("/project4.properties");
+        context.setAttribute("project4Properties", project4Properties);
+        EmployeeDirectory employeeDirectory = new EmployeeDirectory(project4Properties);
         context.setAttribute("employeeDirectory", employeeDirectory);
     }
 }

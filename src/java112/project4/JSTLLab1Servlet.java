@@ -40,7 +40,7 @@ public class JSTLLab1Servlet extends HttpServlet {
 
             request.setAttribute("myList", frankWords);
 
-            String url = "/jstl-lab2.jsp";
+            String url = "/jsp/jstl-lab2.jsp";
 
             RequestDispatcher  dispatcher = getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);

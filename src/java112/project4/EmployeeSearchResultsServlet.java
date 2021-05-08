@@ -52,7 +52,7 @@ import java112.employee.*;
         session.setAttribute("EmployeeSearchResults", employeeSearch);
 
         //Create the url
-        String url = "/employeejsp/employeeSearchResults.jsp";
+        String url = "/jsp/employeeSearchResults.jsp";
 
         //Forward to jsp page
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);

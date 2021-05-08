@@ -45,7 +45,7 @@ public class HttpRequestServlet extends HttpServlet {
 
         request.setAttribute("results", newRequest);
 
-        String url = "/project3HTTPRequestData.jsp";
+        String url = "/jsp/project3HTTPRequestData.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
