@@ -68,31 +68,27 @@ public class EmployeeDirectory {
     public void addNewRecord(String[] arguments) {
 
         Connection connection = null;
-        Statement statement = null;
+        PreparedStatement prepStatement = null;
 
         try {
             // Establishes a connection
             connection = establishConnection();
 
-            // Enables you to execute a query
-            statement = connection.createStatement();
+            // Create a prepared statement for the query
+            prepStatement = connection.prepareStatement("INSERT INTO employees " +
+                    "(first_name, last_name, ssn, dept, room, phone)" +
+                    "VALUES (?, ?, ?, ?, ?, ?)");
 
             //Set arguments to variables
-            String firstName = arguments[0];
-            String lastName = arguments[1];
-            String ssn = arguments[2];
-            String dept = arguments[3];
-            String room = arguments[4];
-            String phone = arguments[5];
-
-            // Create the an sql insert statement
-            String queryString = "INSERT INTO employees (first_name, last_name, "
-                    + "ssn, dept, room, phone) "
-                    + "VALUES ('" + firstName + "', '" + lastName + "', '" +
-                     ssn + "', '" + dept +"', '" + room + "', '" + phone + "')";
+            prepStatement.setString(1, arguments[0]);
+            prepStatement.setString(2, arguments[1]);
+            prepStatement.setString(3, arguments[2]);
+            prepStatement.setString(4, arguments[3]);
+            prepStatement.setString(5, arguments[4]);
+            prepStatement.setString(6, arguments[5]);
 
             // Execute the query
-            statement.executeUpdate(queryString);
+            prepStatement.executeUpdate();
 
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
@@ -104,8 +100,8 @@ public class EmployeeDirectory {
             // Close the connection
             try {
 
-                if (statement != null) {
-                    statement.close();
+                if (prepStatement != null) {
+                    prepStatement.close();
                 }
 
                 if (connection != null) {
@@ -164,18 +160,20 @@ public class EmployeeDirectory {
             // Execute the query
             resultSet = statement.executeQuery(resultQueryString);
 
-            //If the query returns any rows then set the boolean in the searchObject
-            //to True, if not set it to false
+            /**If the query returns any rows then set the boolean in the searchObject
+             * to True, if not set it to false
+             */
             if (resultSet.next()) {
                 searchObject.setEmployeeFound(true);
 
                 // Resest the cursor in the resultSet to the begining
                 resultSet.beforeFirst();
 
-                //If the query returns rows then instantiate the new Employee object
-                //for each row and set it's instance variables from the row from the database.
-                //Each new Employee object will be added to the Search object with the
-                //addFoundEmployee() method
+                /** If the query returns rows then instantiate the new Employee object
+                 * for each row and set it's instance variables from the row from the database.
+                 * Each new Employee object will be added to the Search object with the
+                 * addFoundEmployee() method
+                 */
                 while (resultSet.next()) {
                     String resultedEmployeeId = resultSet.getString("emp_id");
                     String resultedFirstName = resultSet.getString("first_name");
