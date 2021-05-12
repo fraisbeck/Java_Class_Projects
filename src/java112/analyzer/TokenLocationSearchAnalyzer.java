@@ -120,7 +120,7 @@ public class TokenLocationSearchAnalyzer implements TokenAnalyzer {
             } else {
                 outputFull += outputLine;
             }
-            if ((outputLine.length() > 70) {
+            if ((outputLine.length() > 70)) {
                 outputFull += outputLine;
                 outputLine = "\n";
             } else {
